@@ -1,1 +1,6 @@
-mRtcEngine.enableVideo();
+localStream.init(function() {
+  console.log("getUserMedia successfully");
+  localStream.play('agora_local');
+}, function (err) {
+  console.log("getUserMedia failed", err);
+});
